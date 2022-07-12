@@ -21,9 +21,9 @@ issueButtons.forEach(issueButton => {
                 issue.classList.add('show-issue');
                 issue.classList.remove('hide-issue');
             }
-        })
+        });
 
-    })
+    });
 });
 
 authorButtons.forEach(authorButton => {
@@ -37,9 +37,9 @@ authorButtons.forEach(authorButton => {
                 issue.classList.add('show-issue');
                 issue.classList.remove('hide-issue');
             }
-        })
+        });
 
-    })
+    });
 });
 
 searchFilter.addEventListener('keyup', (e) => {
@@ -52,5 +52,5 @@ searchFilter.addEventListener('keyup', (e) => {
             issue.classList.add('show-issue');
             issue.classList.remove('hide-issue');
         }
-    })
-})
+    });
+});
