@@ -1,11 +1,10 @@
 # Issue Tracker
 
-#Frameworks used
--Nodejs
--EJS
--MongoDB
--Express 
+# Frameworks used
+- Nodejs
+- EJS
+- MongoDB
+- Express 
 
 # Hosted URL
-
-https://muntazir.in/issuetracker
+- https://muntazir.in/issuetracker
