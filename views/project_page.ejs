@@ -21,7 +21,12 @@
 
     <div class="list-group list-group-flush mt-5">
         <div class="list-group-item">
-            <center><h1>Issues In This Project</h1></center>
+            <div class="container">
+                <div class="row">
+                    <h1 class="col-sm">Issues In This Project</h1>
+                    <input class="col-sm" id="search-filter" type="text" placeholder="Search by Title or Description">
+                </div>
+            </div>
             <hr>
             <%- include('./partials/_issue-filter.ejs') %>
             <hr>

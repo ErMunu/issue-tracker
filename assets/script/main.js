@@ -1,6 +1,7 @@
 const issueButtons = document.querySelectorAll('.issue-btn');
 const authorButtons = document.querySelectorAll('.author-btn');
 const issues = document.querySelectorAll('.issue');
+const searchFilter = document.querySelector('#search-filter');
 
 issueButtons.forEach(issueButton => {
     issueButton.addEventListener('click', (e) => {
@@ -40,3 +41,16 @@ authorButtons.forEach(authorButton => {
 
     })
 });
+
+searchFilter.addEventListener('keyup', (e) => {
+
+    issues.forEach(issue => {
+        if (!issue.childNodes[3].innerText.includes(e.target.value)) {
+            issue.classList.add('hide-issue');
+            issue.classList.remove('show-issue');
+        } else {
+            issue.classList.add('show-issue');
+            issue.classList.remove('hide-issue');
+        }
+    })
+})
