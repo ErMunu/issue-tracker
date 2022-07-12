@@ -12,4 +12,4 @@
 - Express 
 
 # Hosted URL
-- https://muntazir.in/issuetracker
+- https://munu-issue-tracker.herokuapp.com/
