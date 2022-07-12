@@ -1,0 +1,49 @@
+<% if(project.issues.length==0) { %>
+    <center>
+        <h1>Perfect Project<br><br>No Issue Found</h1>
+    </center>
+<% } %>
+<div class="row" style="justify-content: space-evenly;">
+    <% let count=1; 
+    for( let issue of project.issues ) { %>
+        <div class="card text-white bg-primary m-3 issue" style="max-width: 20rem;">
+            <div class="card-header">
+                Author : <%= issue.author %>
+                <span class="float-right"># <%= count %></span>
+            </div>
+            <div class="card-body">
+                <% for( let label of issue.labels ) { %>
+                    <span class="badge <%
+                        switch (label){
+                            case 'Bug':
+                            %>bg-danger<%
+                            break;
+         
+                            case 'Documentation':
+                            %>bg-info<%
+                            break;
+
+                            case 'Improvement':
+                            %>bg-success<%
+                            break;
+         
+                            case 'Enhancement':
+                            %>badge bg-secondary<%
+                            break;
+         
+                            case 'Duplicate':
+                            %>bg-warning<%
+                            break;
+                        } %>" >
+                        <%= label %>
+                    </span>
+                <% } %>
+                <h4 class="card-title">Issue Title : <%= issue.title %></h4>
+                <p class="card-text">Issue Description : <%= issue.description %></p>
+                <span class="float-right">
+                    <%= moment(issue.createdAt).fromNow() %>
+                </span>
+            </div>
+        </div>
+    <% count++ } %>
+</div>

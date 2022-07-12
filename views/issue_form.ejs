@@ -1,0 +1,55 @@
+<div class="container-fluid list-group-item list-group-item-action">
+    <h1>Create a new Issue for
+        <strong>
+            <%= project.name %>
+        </strong>
+    </h1>
+
+    <form action="/project/create-issue/<%=project._id%>" method="POST">
+        <fieldset>
+            <div class="form-group">
+                <label for="name" class="form-label mt-4">Issue Title</label>
+                <input type="text" name="title" class="form-control" id="name" placeholder="Title of your Issue" required>
+            </div>
+            <div class="form-group">
+                <label for="description" class="form-label mt-4">Issue Description</label>
+                <textarea class="form-control" name="description" id="description" rows="3"
+                    placeholder="Describe your issue..." required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="description" class="form-label mt-4">Issue Type </label>
+                <small class="text-muted float-right mt-4">You can check multiple tags here</small>
+                <div class="btn-group form-control" role="group" aria-label="Basic checkbox toggle button group">
+
+                    <input type="checkbox" name="labels" class="btn-check" id="Bug" autocomplete="off" value="Bug">
+                    <label class="btn btn-danger" for="Bug">Bug</label>
+
+                    <input type="checkbox" name="labels" class="btn-check" id="Improvement" autocomplete="off" value="Improvement">
+                    <label class="btn btn-success" for="Improvement">Improvement</label>
+
+                    <input type="checkbox" name="labels" class="btn-check" id="Documentation" autocomplete="off" value="Documentation">
+                    <label class="btn btn-info" for="Documentation">Documentation</label>
+
+                    <input type="checkbox" name="labels" class="btn-check" id="Enhancement" autocomplete="off" value="Enhancement">
+                    <label class="btn btn-secondary" for="Enhancement">Enhancement</label>
+
+                    <input type="checkbox" name="labels" class="btn-check" id="Duplicate" autocomplete="off" value="Duplicate">
+                    <label class="btn btn-warning" for="Duplicate">Duplicate</label>
+
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="author" class="form-label mt-4">Author Name</label>
+                <input type="text" name="author" class="form-control" id="author" placeholder="Name of Author" required>
+            </div>
+            <div class="form-group row p-4">
+                <button type="reset" class="btn btn-outline-danger col-sm-6">Reset Form</button>
+                <button type="submit" class="btn btn-outline-success col-sm-6">Submit Form</button>
+            </div>
+        </fieldset>
+    </form>
+</div>
+
+</form>

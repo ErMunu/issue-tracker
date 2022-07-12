@@ -1,0 +1,32 @@
+<div class="card border-primary">
+    <div class="card-header">
+        <h4 class="card-title">
+            Project Name :
+            <%= project.name %>
+                <small class="text-muted">
+                    &mdash;
+                    <%= project.author %>
+                </small>
+                <span class="float-right">
+                    <%= moment(project.createdAt).fromNow() %>
+                </span>
+        </h4>
+    </div>
+    <div class="card-body">
+        <h6>Project Description :</h6>
+        <p class="card-text">
+            <%= project.description %>
+        </p>
+    </div>
+
+    <div class="list-group list-group-flush mt-5">
+        <div class="list-group-item">
+            <center><h1>Issues In This Project</h1></center>
+            <hr>
+            <%- include('./partials/_issue-filter.ejs') %>
+            <hr>
+            <%- include('./partials/_issues.ejs') %>
+        </div>
+
+    </div>
+</div>

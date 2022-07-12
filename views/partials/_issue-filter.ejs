@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="row" style="justify-content: space-between;">
+    <div class="col-sm">
+        <h3>Filter by Issue Type</h3>
+        <hr>
+        <% for( let label of project.labels ) { %>
+        <span class="badge <%
+        switch (label){
+            case 'Bug':
+            %>bg-danger<%
+            break;
+
+            case 'Documentation':
+            %>bg-info<%
+            break;
+            
+            case 'Improvement':
+            %>bg-success<%
+            break;
+
+            case 'Enhancement':
+            %>badge bg-secondary<%
+            break;
+
+            case 'Duplicate':
+            %>bg-warning<%
+            break;
+        }
+        %>"><%= label %></span>
+    <% } %>
+</div>
+    <div class="col-sm">
+        <h3>Filter by Author Name</h3>
+        <hr>
+        <% let authors = [];
+        for( let issue of project.issues ){
+            if(!authors.includes(issue.author)){
+                authors.push(issue.author);
+            }
+        }
+        authors.forEach( author => { %>
+            <span class="badge bg-primary"><%= author %></span>
+        <% }) %>
+    </div>
+</div>
+</div>

@@ -1,0 +1,27 @@
+<div class="container-fluid list-group-item list-group-item-action">
+    <h1>Create a new project</h1>
+
+    <form action="/project/create-project" method="POST">
+        <fieldset>
+            <div class="form-group">
+                <label for="name" class="form-label mt-4">Project Name</label>
+                <input type="text" name="name" class="form-control" id="name" placeholder="Name of your project"
+                    required>
+            </div>
+            <div class="form-group">
+                <label for="description" class="form-label mt-4">Project Description</label>
+                <textarea class="form-control" name="description" id="description" rows="3"
+                    placeholder="Write something about your project..." required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="author" class="form-label mt-4">Author Name</label>
+                <input type="text" name="author" class="form-control" id="author" placeholder="Name of Author" required>
+            </div>
+
+            <div class="form-group row p-4">
+                <button type="reset" class="btn btn-outline-danger col-sm-6">Reset Form</button>
+                <button type="submit" class="btn btn-outline-success col-sm-6">Submit Form</button>
+            </div>
+        </fieldset>
+    </form>
+</div>

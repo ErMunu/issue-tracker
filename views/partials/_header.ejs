@@ -1,0 +1,18 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">Issue Tracker</a>
+        <ul class="navbar-nav me-auto ">
+            <li class="nav-item">
+                <% if( title==="Issue Tracker | Project Page" ){ %>
+                    <a class="nav-link" href="/project/create-issue/<%= project.id %>">
+                        Create Issue
+                    </a>
+                <% }else{ %>
+                    <a class="nav-link" href="/project/create-project">
+                        Create Project
+                    </a>
+                <% } %>
+            </li>
+        </ul>
+    </div>
+</nav>
