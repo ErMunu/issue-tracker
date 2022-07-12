@@ -4,7 +4,7 @@
         <h3>Filter by Issue Type</h3>
         <hr>
         <% for( let label of project.labels ) { %>
-        <span class="badge <%
+        <span class="badge issue-btn <%
         switch (label){
             case 'Bug':
             %>bg-danger<%
@@ -39,7 +39,7 @@
             }
         }
         authors.forEach( author => { %>
-            <span class="badge bg-primary"><%= author %></span>
+            <span class="badge author-btn bg-primary"><%= author %></span>
         <% }) %>
     </div>
 </div>

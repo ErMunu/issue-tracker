@@ -40,3 +40,16 @@ footer a {
 footer a:hover {
     text-shadow: 1px 1px 2px aliceblue;
 }
+
+.issue-btn,
+.author-btn {
+    cursor: pointer;
+}
+
+.hide-issue {
+    display: none;
+}
+
+.show-issue {
+    display: flex;
+}
