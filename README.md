@@ -12,4 +12,4 @@
 - Express 
 
 # Hosted URL
-- https://munu-issue-tracker.herokuapp.com/
+- https://ermunu-issue-tracker.herokuapp.com/
